@@ -124,9 +124,13 @@ f:SetScript("OnEvent", function(self, event, ...)
     end
 end)
 
+local init
 f.update = function()
     if BackpackTokenFrame:IsShown() then BackpackTokenFrame_Update() end
-    if TokenFrame:IsShown() then TokenFrame_Update() end
+    if TokenFrame:IsShown() or not init then
+        TokenFrame_Update()
+        init = True
+    end
 end
 core.RegisterListener("balance", f)
 
