@@ -1,0 +1,71 @@
+## Interface: 30300
+## Title: Transmoggy
+## Version: 1.0.0
+## Notes: Transmog, Outfits and Wardrobe Features for WotLK
+## Author: Qhoernchen
+## SavedVariables: TransmoggyDB
+## X-Website: https://github.com/hannes121/Transmoggy
+## X-Email: qhoernchen@gmail.com
+
+# libs
+#@no-lib-strip@
+Libs\embeds.xml
+#@end-no-lib-strip@
+
+Localization.lua
+Utilities.lua
+DebugUtilities.lua
+LDB.lua
+API_Extensions.lua
+Options.lua
+
+# FrameTemplates
+Frames\FrameTemplates.lua
+
+ItemQuery.lua
+Core.lua
+Hooks.lua
+
+# Enchant and item data
+Data\DataUtils.lua
+Data\Enchants.lua
+Data\Items.lua
+Data\ItemNamesEnglish.lua
+Data\ItemNamesGerman.lua
+Data\Recipes.lua
+Data\MannequinPositions.lua
+#Data\StringData.lua
+
+# ItemCollectionFrame
+Frames\ItemCollectionFrame\CollectionSlotButton.lua
+Frames\ItemCollectionFrame\ItemTypeDDM.lua
+Frames\ItemCollectionFrame\OptionsDDM.lua
+Frames\ItemCollectionFrame\MannequinFrame.lua
+Frames\ItemCollectionFrame\ItemCollectionFrame.lua
+
+# UnlocksOverviewFrame
+Frames\ItemCollectionFrame\UnlocksOverviewFrame.lua
+
+# TransmogFrame
+Frames\TransmogFrame\PreviewModel.lua
+Frames\TransmogFrame\TransmogSlotButton.lua
+Frames\TransmogFrame\SkinDropDown.lua
+Frames\TransmogFrame\EnchantUnlock.lua
+Frames\TransmogFrame\TransmogFrame.lua
+
+# WardrobeFrame
+Frames\WardrobeFrame\WardrobeFrame.lua
+
+# Misc Frames
+Frames\ActiveSkinDropDown.lua
+Frames\ExtraItemTooltip.lua
+
+# Outfit Stuff
+Outfits.lua
+Frames\OutfitFrame\OutfitDropDown.lua
+Frames\OutfitFrame\OutfitFrame.lua
+Frames\OutfitFrame\DressUpFrame.lua
+Frames\OutfitFrame\OutfitTooltip.lua
+
+# Hooks and stuff to make shards displayable like tokens
+BalanceDisplay.lua
