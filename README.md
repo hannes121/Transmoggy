@@ -6,7 +6,7 @@ Currently, only german and english localization is supported.
 ## Installation:
 - Download the [latest release](https://github.com/hannes121/TransmogAddon/releases/latest)
 - Unpack the zip file
-- Go into the folder and copy the Transmoggy folder into your WoW/Interface/AddOns folder
+- Go into the folder and copy the Transmoggy folder into your WoW/Interface/AddOns folder (The path of the .toc file should look like "PathToYourWoWFolder\WoW\Interface\AddOns\Transmoggy\Transmoggy.toc")
 
 ## Features:
 ### Transmogrification interface:
