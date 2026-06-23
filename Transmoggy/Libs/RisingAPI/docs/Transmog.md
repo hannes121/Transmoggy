@@ -200,7 +200,7 @@ Get a list of all skins.
 ```
 {
 	id: SkinId,
-	name: string,
+	name: string?,
 	slots: SlotMap,
 }[]
 ```

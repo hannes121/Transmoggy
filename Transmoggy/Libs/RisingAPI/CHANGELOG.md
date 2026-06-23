@@ -1,4 +1,4 @@
 # Changelog
 
-#### Version 3
+## Version 3
 * Initial public release

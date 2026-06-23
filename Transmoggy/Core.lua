@@ -1062,7 +1062,7 @@ core.SetSkin = function(skin, silent)
 	local id = skin.id
 	
 	skins[id] = {}
-	skins[id].name = skin.name
+	skins[id].name = skin.name or ""
 	skins[id].slots = {}
 
 	for slotID, itemID in pairs(skin.slots) do
@@ -1075,7 +1075,7 @@ core.SetSkin = function(skin, silent)
 		SetCurrentChanges(core.GetCurrentChanges()) -- Check changes against new skin state
 	end
 
-	if skin.id == core.GetSelectedSkin() and not skin.name or skin.name == "" then -- If we reset our currently selected skin, flip back to inventory
+	if skin.id == core.GetSelectedSkin() and (not skin.name or skin.name == "") then -- If we reset our currently selected skin, flip back to inventory
 		core.SetSelectedSkin()
 	elseif not silent then 
 		core.UpdateListeners("selectedSkin")

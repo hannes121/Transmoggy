@@ -6,9 +6,9 @@ The implementation used for this API is available via `LibStub("deferred")` and 
 
 #### Basic usage example
 ```lua
-local API = LibStub("RisingAPI")
+local RisingAPI = LibStub("RisingAPI")
 
-API.Transmog.GetBalance():next(function(result)
+RisingAPI.Transmog.GetBalance():next(function(result)
 	print("Your transmog shard balance is: " .. result.shards)
 end):catch(function(err)
 	print("An error occured: " .. err.message)

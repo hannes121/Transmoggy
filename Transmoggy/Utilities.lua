@@ -179,7 +179,7 @@ end
 
 core.GetShortenedString = function(s, len)
 	len = len and (len >= 3 and len or 3) or 20
-	if strlen(s) <= len then
+	if not s or strlen(s) <= len then
 		return s
 	else
 		return strsub(s, 1, len - 3) .. "..."
