@@ -150,7 +150,7 @@ L.deDE = {
 
     SKIN_NEEDS_ACTIVATION = "Skin muss benannt werden, bevor er benutzt werden kann.",
 
-    SKIN_NAME_TOO_SHORT = "Skinnamen müssen mindestens ein Zeichen lang sein.",
+    SKIN_NAME_TOO_SHORT = "Skinnamen müssen zwischen einem und fünzig Zeichen lang sein.",
     SKIN_NAME_INVALID_CHARACTERS = "Skinname enthält ungültige Zeichen.",
 
     OUTFIT_NAME_TOO_SHORT = "Outfitnamen müssen mindestens ein Zeichen lang sein.",
@@ -445,7 +445,7 @@ L.enEU = {
 
     SKIN_NEEDS_ACTIVATION = "Skins need to be named, before they are usable.",
 
-    SKIN_NAME_TOO_SHORT = "Skin name must be atleast one character long.",
+    SKIN_NAME_TOO_SHORT = "Skin name must be between one and fifty characters long.",
     SKIN_NAME_INVALID_CHARACTERS = "Skin name contains illegal characters.",
 
     OUTFIT_NAME_TOO_SHORT = "Outfit name must be atleast one character long.",

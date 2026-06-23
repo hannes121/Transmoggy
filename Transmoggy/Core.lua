@@ -1562,7 +1562,7 @@ end
 
 local CheckForInvalidSkinName = function(name)
 	local denyMessage
-	if string.len(name) < 1 then
+	if string.len(name) < 1 or string.len(name) > 50 then
 		denyMessage = core.SKIN_NAME_TOO_SHORT
 	elseif string.find(name, "[^ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz _.,'1234567890]") then
 		denyMessage = core.SKIN_NAME_INVALID_CHARACTERS
