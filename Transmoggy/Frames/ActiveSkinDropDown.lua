@@ -106,16 +106,16 @@ core.UpdateSkinDropdown = function()
 	local enableActiveSkinDropDown = (not selected or selected == "_02_dropdown") and skins and core.Length(skins) > 0 -- or check for usable skins?
 	local enableActiveSkinButton = selected and strfind(selected, "button")
 	local buttonPos = enableActiveSkinButton and strfind(selected, "left") and "BOTTOMLEFT" or "BOTTOMRIGHT"
-	-- TODO: can we remember the "before" title dropdown width? titleFrameWidthOrig = UIDropDownMenu_GetWidth(PlayerTitleFrame)
-	-- also remember point?
 
-	-- /run print(PlayerTitleFrame:IsShown()) works as we want, so check this and place skins full width if we have no titles (which is probably never the case, that we have a skin but no title ...)
-	
 	if enableActiveSkinDropDown and not core.activeSkinDropDown:IsShown() then
 		UIDropDownMenu_SetWidth(PlayerTitleFrame, 90)
 		PlayerTitleFrame:ClearAllPoints()
 		PlayerTitleFrame:SetPoint("TOPRIGHT", CharacterLevelText, "BOTTOM", 0, -9)
-		core.activeSkinDropDown:SetPoint("LEFT", PlayerTitleFrameButton, "RIGHT", -12, -2)
+		if PlayerTitleFrame:IsShown() then
+			core.activeSkinDropDown:SetPoint("TOPLEFT", CharacterLevelText, "BOTTOM", -30, -4)
+		else
+			core.activeSkinDropDown:SetPoint("TOP", CharacterLevelText, "BOTTOM", -25, -2) -- Center below level text, if no title frame is shown
+		end
 		core.activeSkinDropDown:SetFrameLevel(core.activeSkinDropDown:GetParent():GetFrameLevel() + 2)
 		core.activeSkinDropDown:Show()
 	elseif not enableActiveSkinDropDown and core.activeSkinDropDown:IsShown() then
@@ -131,3 +131,4 @@ core.UpdateSkinDropdown = function()
 end
 
 PaperDollFrame:HookScript("OnShow", core.UpdateSkinDropdown)
+CharacterModelFrame:HookScript("OnShow", core.UpdateSkinDropdown) -- Also hooking to CharacterModelFrame, because ElvUI overrides PaperDollFrame's OnShow
